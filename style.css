@@ -1,9 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+}
+/* HEADER SECTION
+ */
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 16px;
+  align-items: center;
+}
+header div {
+  display: flex;
+}
+.account-section img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+main {
+  display: flex;
 }
 
-h1 {
-  color: #da1313;
+/* SIDE MENU SECTION
+ */
+.menu-section {
+  width: 240px;
+}
+.space {
+  padding: 12px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.card {
+  padding: 0 12px;
 }
