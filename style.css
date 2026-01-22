@@ -414,7 +414,8 @@ body {
   margin-bottom: 12px;
 }
 
-.video-thumbnail img {
+.video-thumbnail img,
+.video-thumbnail video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -522,6 +523,9 @@ body {
     border-bottom: none;
     padding: 4px 0;
   }
+  .header-svg {
+    display: none;
+  }
 
   .sidebar-section:first-child {
     display: block;
@@ -600,9 +604,10 @@ body {
     content: "";
     width: 24px;
     height: 24px;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z'/%3E%3C/svg%3E");
+    background-image: url("resources/you.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    align-items: center;
   }
 
   .sidebar-section:nth-child(3) .sidebar-header span {
@@ -616,7 +621,9 @@ body {
     display: none;
   }
 
-  .sidebar-section:nth-child(4) {
+  .sidebar-section:nth-child(4),
+  .sidebar-section:nth-child(5),
+  .sidebar-section:nth-child(6) {
     display: none;
   }
 
@@ -702,7 +709,7 @@ body {
 
 @media (max-width: 656px) {
   body {
-    padding: 1rem;
+    padding: 0.4rem;
   }
   .sidebar {
     display: none;
@@ -710,12 +717,16 @@ body {
 
   .main-content {
     margin-left: 0;
-    padding: 16px 12px;
+    padding: 0 20px 8px 16px;
+    margin: 0;
   }
 
   .header {
     padding: 0 12px;
     height: 56px;
+    background-color: #0f0f0fe7;
+    backdrop-filter: blur(10px);
+    position: sticky;
   }
 
   .header-left .youtube-logo-text {
@@ -747,6 +758,8 @@ body {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    width: 100%;
+    position: sticky;
   }
 
   .filter-chips::-webkit-scrollbar {
