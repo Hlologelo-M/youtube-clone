@@ -508,6 +508,49 @@ body {
   border-radius: 50%;
 }
 
+/* Video Menu Dropdown */
+.video-menu-wrapper {
+  position: relative;
+}
+
+.video-menu-dropdown {
+  position: absolute;
+  right: 0;
+  top: 32px;
+  background: #181818;
+  border: 1px solid #303030;
+  border-radius: 8px;
+  display: none;
+  z-index: 100;
+  min-width: 160px;
+}
+
+.menu-item {
+  padding: 10px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #272727;
+}
+
+.video-menu-wrapper.open .video-menu-dropdown {
+  display: block;
+}
+.remove-watch-later {
+  background: transparent;
+  border: none;
+  color: #3ea6ff;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 4px 8px;
+}
+
+.remove-watch-later:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1313px) {
   .sidebar {
     width: 72px;
@@ -817,4 +860,70 @@ body {
     height: 24px;
     opacity: 1;
   }
+}
+
+/* Login Page Styles */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f0f0f;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  background: #181818;
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #303030;
+  background: #121212;
+  color: #fff;
+  font-size: 14px;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: #1c62b9;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #1c62b9;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #1a5bb8;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.login-footer a {
+  color: #3ea6ff;
+  text-decoration: none;
 }
